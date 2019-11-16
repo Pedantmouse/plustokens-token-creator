@@ -1,0 +1,78 @@
+<div id="toggleAirdrop" onclick="ToggleAirdrop()"><center><span style="font-size:14px;"><b>TBL</b>AIRDROP</span><br/><i id="chevronIcon" class="fa fa-2x fa-chevron-right animated infinite pulse"></i></center></div>
+<div style="display:none; visibility:collapse;" id="airdropPopOut">
+	<div style="position: absolute; top:5px; left:5px;" class="animated pulse infinite"><i style="color:lightgrey" class="fa fa-2x fa-info-circle" onclick="AirdropInfo()"></i></div>
+	<div style="position: absolute; top:5px; right:5px;"><i style="color:white;" class="fa fa-2x fa-window-close" onclick="ToggleAirdrop()"></i></div>
+	<div id="airdropMoreInfo" class="airdropInfo">
+		<div style="position: absolute; top:5px; right:5px;"><i style="color:white;" class="fa fa-2x fa-window-close" onclick="AirdropInfo()"></i></div>
+		<h1 style="color:white; font-weight: 700;" class="text-center">TOKENOMICS</h1>
+		<p style="font-size:16px;"><strong>How will the Blotto(TBL) token be distributed?</strong></p>
+		<hr style="border-color:white;"/>
+		<ul style="float:left;">
+			<h2><b>TOKEN SUPPLY ALLOCATIONS</b></h2>
+			<li><span class="tokenStatList">88%</span> - Initial Token Airdrop</li>
+			<li><span class="tokenStatList">10%*</span> - Incentive rewards to be allocated to future games/competitions on the T>B>L platform. <em>*Any unclaimed tokens during the airdrop will be added to this amount.</em></li>
+			<li><span class="tokenStatList">2%</span> - Allocated to developers</li>
+		</ul>
+		<hr style="border-color:white; width:50%; float:left;"/>
+		<ul style="float:left;">
+			<li><span class="tokenStatList">1,000,000.0</span> - Total Supply</li>
+			<li><span class="tokenStatList">880,000.0</span> - Airdrop</li>
+			<li><span class="tokenStatList">100,000.0</span> - Incentive Rewards</li>
+			<li><span class="tokenStatList">20,000.0</span> - Dev allocation</li>
+		</ul>
+</div>
+	<h1 style="color:white;" class="text-center"><b>T>B>L</b><span style="color:#A3A3A3">AIRDROP</span></h1>
+	<center>
+		<span>Round 1 - </span><a href="https://etherscan.io/address/0x429A7e2Ec861A845d23fF7D1bC8913E836933936"><span class="roundAddress" id="round1" style="font-weight: 700; letter-spacing: 1px; word-break: break-all; word-wrap: break-word;"></span></a>
+		<br/>
+		<span>Round 2 - </span><a href="https://etherscan.io/address/0x2d6feb99021bc36f7e07e0571fdcef2670cd70e4"><span class="roundAddress" id="round2" style="font-weight: 700; letter-spacing: 1px; word-break: break-all; word-wrap: break-word;"></span></a>
+		<br/>
+	</center>
+	<p><b>&nbsp;Blotto(TBL)</b> is an Ethereum based token using the <a href="https://theethereum.wiki/w/index.php/ERC20_Token_Standard" target="_blank">ERC-20 token standard</a> created using <a href="index.php">plustokens</a> ERC20 creator.<br/>&nbsp;This token will be utilized in our future games and competitions over at <a href="https://theblockchainlottery.win">https://theblockchainlottery.win</a>! We will be listing TBL on decentralized exchanges once all tokens have been distributed.</p><div style="color:white; font-size:22px; font-weight: 700;" class="animated pulse infinite text-center">Airdrop Live Now!</div>
+	<hr style="border:1px white solid"/>
+	<div class="row text-center">
+	    <div class="text-center col-12 order-2 col-md-6">
+		   <a href="https://theblockchainlottery.win"><img alt="Airdrop Coming Soon Promotional Image" style="width:50%; margin:auto;" src="img/logo.gif"/></a>
+		</div>
+		<div class="text-left order-1 col-md-6">
+			<div style="padding:5px"> 
+				<ul>
+					<li><span>TOKENS DROPPED - <span id="tokensDropped" class="tokenStatList">N/A</span></span></li>
+					<li><span>TOKENS REMAINING - <span id="tokensLeft" class="tokenStatList">N/A</span></span></li>
+					<li><span>AIRDROP PARTICIPANTS - <span id="currentParticipants" class="tokenStatList">N/A</span></span></li>
+					<li><span>YOUR CLAIMABLE TOKENS - <span id="tokensClaimable" class="tokenStatList">N/A</span></span></li>
+					<li><span>YOUR <strong>TBL</strong> TOKENS - <span id="yourTokens" class="tokenStatList">N/A</span></span></li>
+				</ul>
+				<span>Round 2 <i style="font-size:0.6em">of 3</i> Ends : </span>
+				<span id="airdropCountdown"></span>
+			</div>
+		</div>
+	</div>
+	<hr style="border:1px white solid"/>
+	<div style="font-size:14px; text-align: left;">If your wallet does not automatically show the airdropped tokens, add a new token to your wallet using the following information...
+	<ul>
+		<h2><b>TOKEN INFO</b></h2>
+		<li>Token Contract Address - <a style="word-break: break-all; word-wrap: break-word;" href="https://etherscan.io/token/0x9F7b5f851F26a34e510979901579A352C92a5d0c" target="_blank"><b style="letter-spacing: 1px;">0x9F7b5f851F26a34e510979901579A352C92a5d0c</b></a></li>
+		<li>Token Name - <b>Blotto</b></li>
+		<li>Token Ticker/Symbol - <b>TBL</b></li>
+		<li>Token Decimals - <b>1</b></li>
+		</ul>	
+	</div>
+	<hr style="border:1px white solid"/>
+	<hr style="border:1px white solid"/>
+	<center id="enterAirdropForm">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<button id="enterAirdropBtn" class="enterDrawBtn" display="block" onclick="NetworkValidationAirdrop()">Claim Tokens!</button>
+		</div>
+	</div>
+	<div id="dropFooter" class="row">
+		<div class="col-12 col-md-6">
+			<span>You'll receive your tokens directly to your wallet!</span>
+		</div>
+		<div class=" col-12 col-md-6">
+			<span>*Gas fees must be provided to enable transfer of your tokens.</span>
+		</div>
+	</div>
+	</center>
+</div>
